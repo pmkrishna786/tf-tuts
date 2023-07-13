@@ -1,9 +1,8 @@
-resource "aws_instance" "my_vm" {
- ami           = var.ami //Ubuntu AMI
- instance_type = var.instance_type
-
- tags = {
-   Name = var.name_tag,
- }
+resource "aws_instance" "example" {
+  ami           = "ami-023b120e01f4779c1"
+  instance_type = "t2.micro"
+   tags = {
+    Name        = "Test-Server1"
+    Environment = "test"
+  }
 }
-
